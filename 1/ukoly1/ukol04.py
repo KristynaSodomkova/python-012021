@@ -65,6 +65,12 @@ morseCode = {
 
 requestedText = input("Zde napište text, který chcete přeložit do Morseovy abecedy: ")
 
+res = dict((k, morseCode[k]) for k in requestedText
+    if k in morseCode)
+
+print(str(res.values()))
+
+# print(morseCode[requestedText])
 
 # def translation():
 #     message = morseCode[requestedText]
