@@ -500,16 +500,17 @@ staty = [
 
 user_region = input("Jaký region vás zajímá?")
 
-"""total =0
-for item in staty:
-    if item["region"] == user_region:
-        print(item["subregion"])
-        total += item["population"]
-        print(total)"""
-# asked_dict{}
+
+region_dict = {}
 
 for item in staty:
     if item["region"] == user_region:
-        print(item["subregion"])
+        subregion = item["subregion"]
+        if subregion in region_dict:
+            region_dict[subregion] += item["population"]
+        else:
+            region_dict[subregion] = item["population"]
+        # print(item["subregion"])
+print(region_dict)
 
-
+# Nedávám kombinace slovník a seznam, just hate it hate it hate it

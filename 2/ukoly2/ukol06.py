@@ -504,11 +504,14 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 
+# simple is better than complex :D
+
 user_region = input("Jaký region vás zajímá?")
 
 for item in staty:
     if item["region"] == user_region:
         print(item["name"])
-    else:
-        print("Neznámý region.")
+
+if user_region not in staty:
+    print("Neznámý region.")
 

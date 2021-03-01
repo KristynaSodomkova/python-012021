@@ -26,33 +26,31 @@ tel_cislo = "+420 734 123 456"
 tel_cislo = tel_cislo.replace(" ", "")
 """
 
-user_receiver = input ("Zadejte  číslo, kam chcete zprávu zaslat: ")
-user_receiver = user_receiver.replace(" ", "")
-user_text = input("Napište text, který chcete zaslat: ")
+phone_number = input ("Zadejte  číslo, kam chcete zprávu zaslat: ")
+phone_number = phone_number.replace(" ", "")
 
-def verification(user_receiver):
-    if len(user_receiver) >= 9:
-        if len(user_receiver) <= 13:
-            number = True
-            print("True")
-        else:
-            number = False
-            print("False")
+def verification(phone_number):
+    if len(phone_number) == 9:
+        # print("True")
+        return True
+    elif len(phone_number) ==13:
+        # print("True")
+        return True
     else:
-        number = False
-        print("False")
-
-verification(user_receiver)
-
-import math
-sign_number = len(user_text) / 180
-math.ceil(sign_number)
-print(sign_number)
+        print("Zadané číslo neodpovídá formátu.")
+        # return False
 
 
-def price(sign_number):
-    money = sign_number * 3
-    return money
+ok_number = verification(phone_number)
 
-info = price(sign_number)
-print(f"Výsledná cena je {info}.")
+if ok_number:
+    user_text = input("Napište text, který chcete zaslat: ")
+    text_parts = int(len(user_text) / 180)
+    if text_parts == 0:
+        text_parts = 1
+    def price(text_parts):
+        money = text_parts * 3
+        return money
+    to_pay = price(text_parts)
+    print(f"Výsledná cena je {to_pay}Kč.")
+
