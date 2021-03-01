@@ -504,7 +504,7 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 
-# simple is better than complex :D
+# simple is better than complex :)
 
 user_region = input("Jaký region vás zajímá?")
 

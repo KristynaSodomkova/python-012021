@@ -23,3 +23,13 @@ Jindra Hojer: Prospěl
 Červenáček: Prospěl s vyznamenáním
 Rychlonožka: Prospěl
 """
+school_results = [
+    {"name": "Mirek Dušín", "cj": 1, "mat": 1, "aj": 1, "ivt": 1},
+    {"name": "Jarka Metelka", "cj": 2, "mat": 1, "aj": 2, "ivt": 1},
+    {"name": "Jindra Hojer", "cj": 5, "mat": 5, "aj": 5, "ivt": 5},
+    {"name": "Červeňáček", "cj": 3, "mat": 3, "aj": 3, "ivt": 3},
+    {"name": "Rychlonožka", "cj": 3, "mat": 1, "aj": 1, "ivt": 1}
+]
+
+
+def ohodnot_studenta():

@@ -17,6 +17,9 @@ baliky = {
 parcel_code = input("Zadejte kód balíku: ")
 
 if parcel_code in baliky:
-    print("Balík byl předán kurýrovi.")
+    if baliky[parcel_code]:
+        print("Balík byl předán kurýrovi.")
+    else:
+        print("Balík zatím nebyl předán kurýrovi.")
 else:
-    print("Balaík zatím nebyl předán kurýrovi.")
+    print("Balík není zadán v systému.")
