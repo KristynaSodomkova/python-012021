@@ -23,13 +23,36 @@ Jindra Hojer: Prospěl
 Červenáček: Prospěl s vyznamenáním
 Rychlonožka: Prospěl
 """
-school_results = [
-    {"name": "Mirek Dušín", "cj": 1, "mat": 1, "aj": 1, "ivt": 1},
-    {"name": "Jarka Metelka", "cj": 2, "mat": 1, "aj": 2, "ivt": 1},
-    {"name": "Jindra Hojer", "cj": 5, "mat": 5, "aj": 5, "ivt": 5},
-    {"name": "Červeňáček", "cj": 3, "mat": 3, "aj": 3, "ivt": 3},
-    {"name": "Rychlonožka", "cj": 3, "mat": 1, "aj": 1, "ivt": 1}
+vysledky = [
+  {"Jméno": "Mirek Dušín", "Český jazyk": 1, "Anglický jazyk": 2, "Matematika": 1, "Biologie": 1, "Zeměpis": 1},
+  {"Jméno": "Jarka Metelka", "Český jazyk": 3, "Anglický jazyk": 1, "Matematika": 3, "Dějepis": 2, "Ekonomika": 5},
+  {"Jméno": "Jindra Hojer", "Český jazyk": 2, "Anglický jazyk": 2, "Matematika": 1, "Biologie": 3, "Chemie": 3},
+  {"Jméno": "Červenáček", "Český jazyk": 1, "Anglický jazyk": 1, "Matematika": 1, "Fyzika": 2, "Informatika": 4},
+  {"Jméno": "Rychlonožka", "Český jazyk": 4, "Anglický jazyk": 3, "Matematika": 2, "Chemie": 1, "Biologie": 4},
 ]
 
+znamky = [
+    {k: v for k, v in d.items() if k != "Jméno"} for d in vysledky
+]
+
+def ohodnot_studenta
+
+
+print(soucet)
+print(znamky)
+
+
+
+
+"""for item in vysledky:
+    if  item["Jméno"]
+    person = item["Jméno"]
+    value = item[]
 
 def ohodnot_studenta():
+    sum = 0
+    for i in vysledky:
+        sum = sum + vysledky[i]
+    return sum
+
+print(results(vysledky))"""

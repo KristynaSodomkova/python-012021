@@ -66,15 +66,6 @@ morseCode = {
 morseCode[" "] = "/"
 requested_text = input("Zde napište text, který chcete přeložit do Morseovy abecedy: ")
 
-
 for m in requested_text:
     print(morseCode[m], end='  ')
-
-"""
-requested_text = input("Zde napište text, který chcete přeložit do Morseovy abecedy: ")
-for m in requested_text:
-    if m == " ":
-        print("/")
-    else:
-        print(morseCode[m], end=' ')"""
 

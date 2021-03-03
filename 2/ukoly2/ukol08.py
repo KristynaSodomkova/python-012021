@@ -30,12 +30,10 @@ phone_number = input ("Zadejte  číslo, kam chcete zprávu zaslat: ")
 phone_number = phone_number.replace(" ", "")
 
 def verification(phone_number):
-    if len(phone_number) == 9:
+    if len(phone_number) == 9 or len(phone_number) ==13:
         # print("True")
         return True
-    elif len(phone_number) ==13:
-        # print("True")
-        return True
+
     else:
         print("Zadané číslo neodpovídá formátu.")
         # return False
@@ -45,12 +43,11 @@ ok_number = verification(phone_number)
 
 if ok_number:
     user_text = input("Napište text, který chcete zaslat: ")
-    text_parts = int(len(user_text) / 180)
-    if text_parts == 0:
-        text_parts = 1
+    text_parts = int(len(user_text) / 180) + 1
     def price(text_parts):
         money = text_parts * 3
         return money
     to_pay = price(text_parts)
+
     print(f"Výsledná cena je {to_pay}Kč.")
 
