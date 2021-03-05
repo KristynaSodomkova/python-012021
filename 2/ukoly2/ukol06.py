@@ -505,13 +505,15 @@ staty = [
      'area': 390757.0}]
 
 # simple is better than complex :)
+region_found = False
 
 user_region = input("Jaký region vás zajímá?")
 
 for item in staty:
     if item["region"] == user_region:
         print(item["name"])
+        region_found = True
 
-if user_region not in staty:
+if not region_found:
     print("Neznámý region.")
 

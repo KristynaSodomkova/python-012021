@@ -39,6 +39,7 @@ def verification(phone_number):
         # return False
 
 
+
 ok_number = verification(phone_number)
 
 if ok_number:
