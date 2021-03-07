@@ -31,28 +31,29 @@ vysledky = [
   {"Jméno": "Rychlonožka", "Český jazyk": 4, "Anglický jazyk": 3, "Matematika": 2, "Chemie": 1, "Biologie": 4},
 ]
 
-znamky = [
-    {k: v for k, v in d.items() if k != "Jméno"} for d in vysledky
-]
+def ohodnot_studenta(znamky_dict):
+  summation = 0
+  for key,value in znamky_dict.items():
+    summation += value
+  prumer = summation /len(znamky_dict)
+  if 5 in znamky_dict.values():
+      return "Neprospěl"
+  elif prumer <= 1.5 and 3 not in znamky_dict.values():
+      return "Prospěl s vyznamenáním"
+  else:
+      return "Prospěl"
 
-def ohodnot_studenta
+
+for vys in vysledky:
+    znamky_dict = {}
+    jmeno = ""
+    for k in vys:
+        if (k != "Jméno"):
+            znamky_dict[k] = vys[k]
+        else:
+            jmeno = vys[k]
+    print(f"{jmeno}: {ohodnot_studenta(znamky_dict)}")
 
 
-print(soucet)
-print(znamky)
 
 
-
-
-"""for item in vysledky:
-    if  item["Jméno"]
-    person = item["Jméno"]
-    value = item[]
-
-def ohodnot_studenta():
-    sum = 0
-    for i in vysledky:
-        sum = sum + vysledky[i]
-    return sum
-
-print(results(vysledky))"""

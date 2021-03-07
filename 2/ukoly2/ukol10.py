@@ -25,3 +25,60 @@ Napiš funkci, které bude mít 5 parametrů, které reprezentují zadaná krit�
 Poslední dvě kritéria zadej jako nepovinná s výchozí hodnotou False.
 Funkce vrátí šanci na získání zakázky jako řetězec.
 """
+
+def success_evaluation(odvetvi, obrat, zeme, konference=False, newsletter=False):
+    points = 0
+    if odvetvi == "automotive":
+        points += 3
+    elif odvetvi == "retail":
+        points += 2
+    else:
+        points += 0
+
+    if obrat < 10000000:
+        points += 0
+    elif obrat < 1000000000:
+        points += 3
+    else:
+        points += 1
+
+    if zeme == "Česko" or zeme == "Slovensko":
+        points += 2
+    elif zeme == "Německo" or zeme == "Francie":
+        points += 1
+    else:
+        points += 0
+
+    if konference:
+        points += 1
+    else:
+        points += 0
+
+    if newsletter:
+        points += 1
+    else:
+        points += 0
+
+    if points < 5:
+        return "Šance na získání zakázky je malá."
+    elif points <= 8:
+        return "Šance na získání zaázky je střední."
+    else:
+        return "Šance na získání zakázky je vysoká."
+
+area_of_business = input("Zadejte odvětví: ")
+turnover = int(input("Zadejte obrat: "))
+country = input("Zadejte zemi: ")
+conference = input("Účast na konferenci: ")
+bulletin = input("Odběr newsletteru: ")
+
+if conference == "ano":
+    if bulletin == "ano":
+        print(success_evaluation(area_of_business, turnover, country, True, True))
+    else:
+        print(success_evaluation(area_of_business, turnover, country, True, False))
+else:
+    if bulletin == "ano":
+        print(success_evaluation(area_of_business, turnover, country, False, True))
+    else:
+        print(success_evaluation(area_of_business, turnover, country, False, False))
