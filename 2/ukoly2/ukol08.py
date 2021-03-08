@@ -26,9 +26,6 @@ tel_cislo = "+420 734 123 456"
 tel_cislo = tel_cislo.replace(" ", "")
 """
 
-phone_number = input ("Zadejte  číslo, kam chcete zprávu zaslat: ")
-phone_number = phone_number.replace(" ", "")
-
 def verification(phone_number):
     if len(phone_number) == 9 or len(phone_number) ==13:
         # print("True")
@@ -38,16 +35,18 @@ def verification(phone_number):
         print("Zadané číslo neodpovídá formátu.")
         # return False
 
+def price(text_parts):
+    money = text_parts * 3
+    return money
 
+phone_number = input ("Zadejte  číslo, kam chcete zprávu zaslat: ")
+phone_number = phone_number.replace(" ", "")
 
 ok_number = verification(phone_number)
 
 if ok_number:
     user_text = input("Napište text, který chcete zaslat: ")
     text_parts = int(len(user_text) / 180) + 1
-    def price(text_parts):
-        money = text_parts * 3
-        return money
     to_pay = price(text_parts)
 
     print(f"Výsledná cena je {to_pay}Kč.")
