@@ -44,3 +44,10 @@ else:
 # máme na skladě, abych nějak automaticky získávala list značek, které máme na skladě,
 # jenom tím, že je zadáme do nějakého nově zařazeného auta. Takhle jsem to vlastně dost obešla.
 # Například kdybych teď přidala nové auto značky Volvo, tak už mi podmínka nebude fungovat.
+"""návod od Jirky:
+
+auta = {
+    "peugeot": Auto("4A2 3020", "Peugeot", "403 Cabrio", "47534"),
+    "skoda": Auto("4A2 3020", "Škoda", "403 Cabrio", "47534"),
+}
+peugeot = auta["peugeot"]"""

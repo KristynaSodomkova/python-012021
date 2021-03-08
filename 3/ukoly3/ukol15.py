@@ -1,15 +1,32 @@
 """
-Pokračuj ve své práci pro autopůjčovnu, kterou jsi začala v příkladu 11.
-Třídě Auto přidej funkci pujc_auto(), která nebude mít (kromě obligátního self)
-žádný parametr. Funkce zkontroluje, jestli je vozidlo aktuálně volné. Pokud je volné,
-vrátí text "Potvrzuji zapůjčení vozidla" a změní hodnotu atributu, který určuje,
-zda je vozidlo půjčené. Pokud je vozidlo již půjčené, vrátí text "Vozidlo není k dispozici".
-Dále tříde Auto přidej funkci get_info(), která vrátí informaci o vozidle
-(stačí registrační značka a značka a typ vozidla) jako řetězec.
-Nakonec do programu (mimo třídu) napiš dotaz na uživatele,
-jakou značku si uživatel přeje půjčit. Uživatel může zadávat hodnoty Peugeot nebo Škoda.
-Jakmile si uživatel vybere značku, vypiš informaci o vozidle pomocí funkce get_info()
-a následně použij funkci pujc_auto.
-Dotaz na uživatele a výpis výsledků si v programu zkopíruj, abys dokázala otestovat,
-že funkce nedovolí půjčit stejné auto dvakrát.
+Vytvoř program na prodej vstupenek do letního kina. Ceny vstupenek jsou v tabulce níže.
+Datum: 1.7.2021 - 10.08.2021 cena: 250Kč
+Datum: 11.8.2021 - 31.8.2021 cena: 180 Kč
+Mimo tato data je středisko zavřené.
+
+Tvůj program se nejprve zeptá uživatele na datum a počet osob,
+pro které uživatel chce vstupenky koupit. Uživatel zadá datum ve středoevropském
+formátu. Převeď řetězec zadaný uživatelem na datum pomocí funkce datetime.strptime().
+Následně se zeptej na počet osob,
+
+Pokud by uživatel zadal příjezd mimo otevírací dobu, vypiš, že letní kino je v
+té době uzavřené. Pokud je letní kino otevřené, spočítej a vypiš cenu za ubytování.
+
+Data lze porovnávat pomocí známých operátorů <, >, <=, >=, ==, !=.
+Tyto operátory můžeš použít v podmínce if. Níže vidíš příklad porovnání dvou dat.
+Program vypíše text "První datum je dřívější než druhé datum.".
+
+from datetime import datetime
+prvni_udalost = datetime(2021, 7, 1)
+druha_udalost = datetime(2021, 7, 3)
+if prvni_datum < druhe_datum:
+  print("Druhá událost se stala po první události")
 """
+requested_date = input("Zadejte datum ve středoevropském formátu: ")
+requested_date.strptime()
+number_of_tickets = int(input("Zadejte počet osob: "))
+
+from datetime import datetime
+
+
+

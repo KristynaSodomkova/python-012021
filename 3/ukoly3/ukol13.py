@@ -47,6 +47,7 @@ if looser_input == "Peugeot" or looser_input == "Škoda":
     else:
         print(skoda1.vrat_auto(stav_tachometru, pocet_dni))
 
+# Má ta funkce vrácení běžet až když proběhne správně ta funkce půjčení?
 
 
 
