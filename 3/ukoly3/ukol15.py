@@ -22,11 +22,26 @@ druha_udalost = datetime(2021, 7, 3)
 if prvni_datum < druhe_datum:
   print("Druhá událost se stala po první události")
 """
-requested_date = input("Zadejte datum ve středoevropském formátu: ")
-requested_date.strptime()
-number_of_tickets = int(input("Zadejte počet osob: "))
+from datetime import datetime, timedelta
 
-from datetime import datetime
+datum = input("Zadejte datum ve formátu dd. mm. YYYY: ")
+prevedene_datum = datetime.strptime(datum, "%d. %m. %Y")
+zacatek_sezony = datetime(2021, 7, 1)
+zlom_sezony = datetime(2021, 8, 10)
+konec_sezony = datetime(2021, 8, 31)
+
+if prevedene_datum > konec_sezony or prevedene_datum < zacatek_sezony:
+    print("V této době je letní kino uzavřené.")
+elif prevedene_datum > zlom_sezony:
+    pocet_osob = int(input("Zadejte počet osob: "))
+    cena = pocet_osob * 180
+    print(f"Cena za lístky je {cena} Kč.")
+else:
+    pocet_osob = int(input("Zadejte počet osob: "))
+    cena = pocet_osob * 250
+    print(f"Cena za lístky je {cena} Kč.")
+
+
 
 
 
