@@ -9,9 +9,8 @@ class Uchazec(Kontakt):
         super().__init__(jmeno, email)
         self.datum_pohovoru = datetime.strptime(datum_pohovoru, "%d. %m. %Y")
         self.zapis_z_pohovoru = ""
-        self.aktualni_datum = datetime.now()
     def uloz_zapis(self, zapis_z_pohovoru):
-        if self.aktualni_datum < self.datum_pohovoru:
+        if datetime.now() < self.datum_pohovoru:
             return f"Chybně zadaný datum pohovoru."
         else:
             self.zapis_z_pohovoru = input("Zápis z pohovoru: ")
