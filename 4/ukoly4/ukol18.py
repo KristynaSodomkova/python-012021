@@ -10,17 +10,17 @@ class Uchazec(Kontakt):
         self.datum_pohovoru = datetime.strptime(datum_pohovoru, "%d. %m. %Y")
         self.zapis_z_pohovoru = ""
         self.aktualni_datum = datetime.now()
-    def uloz_zapis(self):
+    def uloz_zapis(self, zapis_z_pohovoru):
         if self.aktualni_datum < self.datum_pohovoru:
             return f"Chybně zadaný datum pohovoru."
         else:
-            self.aktualni_datum = self.zapis_z_pohovoru
+            self.zapis_z_pohovoru = input("Zápis z pohovoru: ")
+            self.zapis_z_pohovoru = zapis_z_pohovoru
             return f"Zápis byl uložen"
 
-pohovor1 = Uchazec("Cyril Pažout", "pazout@seznam.cz", "19. 5. 2021", )
-pohovor2 = Uchazec("Josef Horáček", "horacek@seznam.cz", "12. 2. 2021", )
+pohovor1 = Uchazec("Cyril Pažout", "pazout@seznam.cz", "19. 5. 2021")
+pohovor2 = Uchazec("Josef Horáček", "horacek@seznam.cz", "12. 2. 2021")
 
-print(pohovor1.uloz_zapis())
-print(pohovor2.uloz_zapis())
+print(pohovor1.uloz_zapis("bylo to super"))
+print(pohovor2.uloz_zapis("bylo to strašný"))
 
-# něco tady neštimuje - proč to chce na řádce 14 str? Vždyť to jinak neporovnam...?
