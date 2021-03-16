@@ -34,7 +34,7 @@ class Uzivatel:
     def get_porady(self):
         zhlednute_porady = f"Uživatel {self.uzivatelske_jmeno} zhlédl tyto pořady: "
         for item in self.zhlednute_porady:
-            zhlednute_porady += item.name + ", "
+             zhlednute_porady += item.name + ", "
         return zhlednute_porady
     def delka_sledovani(self):
         celkova_delka_sledovani = 0
