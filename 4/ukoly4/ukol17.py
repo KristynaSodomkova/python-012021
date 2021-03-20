@@ -19,10 +19,11 @@ class Serial(Polozka):
         super().__init__(name, genre)
         self.number_of_episodes = number_of_episodes
         self.episode_length = episode_length
+        self.length = self.episode_length * self.number_of_episodes
+
     def get_info(self):
         return f"{self.name} se řadí k žánru {self.genre}. Série obsahuje {self.number_of_episodes} dílů. Jedna epizoda trvá {self.episode_length} min."
     def get_celkova_delka(self):
-        self.length = self.episode_length * self.number_of_episodes
         return self.length
 
 class Uzivatel:
