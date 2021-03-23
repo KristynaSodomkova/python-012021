@@ -23,3 +23,4 @@ median = den_13_us["AvgTemperatureCelsia"].median()
 print(median)
 rozptyl = den_13_us["AvgTemperatureCelsia"].var()
 print(rozptyl)
+
