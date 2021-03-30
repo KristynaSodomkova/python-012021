@@ -1,0 +1,5 @@
+print("Hello World!")
+print("Ahoj světe!")
+print("Good morning!")
+odpoved = input("Napište odpověď: ")
+print(odpoved)
