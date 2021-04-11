@@ -11,7 +11,7 @@ zkouska = pandas.read_excel("info_pro_zakaznika.xlsx")
 
 # rozšířené zadání
 from openpyxl import Workbook
-from openpyxl.styles import PatternFill
+from openpyxl.styles import PatternFill, GradientFill
 
 wb = Workbook()
 ws1 = wb.active
@@ -28,7 +28,16 @@ radek = 1
 for den in rozvrh_hodin:
   sloupec = 1
   for predmet in den:
-    # Zde zapiš kód pro uložení předmětu do buňky
+    bunka = ws1.cell(radek, sloupec, predmet)
+    if bunka.value == "Anglický jazyk" or bunka.value == "Český jazyk":
+      prechodova_barva = GradientFill(stop=("000000", "FFFFFF"))
+      bunka.fill = prechodova_barva
+    if bunka.value == "Matematika":
+      ruzova_barva = PatternFill("solid", fgColor="00FF99CC")
+      bunka.fill = ruzova_barva
+    if radek == 1:
+      modra_barva = PatternFill("solid", fgColor="00CCCCFF")
+      bunka.fill = modra_barva
     sloupec += 1
   radek += 1
 
