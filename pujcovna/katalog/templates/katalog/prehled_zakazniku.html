@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'katalog' %}">Zpět na hlavní stránku</a>
+
+<h1>Přehled zákazníků</h1>
+
+{% for zakaznik in object_list %}
+
+<p>{{zakaznik.jmenoprijm}}</p>
+
+{% endfor %}
+<a href="{% url 'auta' %}">Katalog našich aut</a>
+</body>
+</html>

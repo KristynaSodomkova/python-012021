@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'index_kurzy' %}">Návrat na hlavní stránku</a>
+
+<h2>{{ object.nazev }}</h2>
+
+<h3>Kdy</h3>
+{{ object.zacatek }}
+<h3>Cena</h3>
+{{ object.cena }}
+
+<p>
+    {{ object.popis }}
+</p>
+
+
+</body>
+</html>

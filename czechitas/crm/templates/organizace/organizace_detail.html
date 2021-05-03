@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'index' %}">Návrat na stránku s organizacemi</a>
+
+<h2>{{ object.jmeno }}</h2>
+
+<h3>Sidlo</h3>
+{{ object.mesto }}
+<h3>Cena</h3>
+{{ object.kontakt }}
+</body>
+</html>
