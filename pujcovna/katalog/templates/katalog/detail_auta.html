@@ -5,19 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+
 <a href="{% url 'katalog' %}">Zpět na hlavní stránku</a>
 
-{% for auto in object_list %}
-
-<h1>Automobil</h1>
+{% block content %}
+<h1>{{auto.znackatyp}}</h1>
 <table>
     <tr>
         <td>Registrační značka: </td>
         <td>{{auto.registracnizn}}</td>
-    </tr>
-    <tr>
-        <td>Značka a typ vozu: </td>
-        <td>{{auto.znackatyp}}</td>
     </tr>
     <tr>
         <td>Počet najetých kilometrů: </td>
@@ -31,7 +27,7 @@
 
 </table>
 
-{% endfor %}
+{% endblock %}
 <br> <br>
 <a href="{% url 'auta' %}">Katalog našich aut</a>
 </body>

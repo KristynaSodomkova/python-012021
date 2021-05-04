@@ -7,14 +7,11 @@
 <body>
 <a href="{% url 'katalog' %}">Zpět na hlavní stránku</a>
 
-{% for zakaznik in object_list %}
+{% block content %}
 
-<h1>Zákazník</h1>
+<h1>{{zakaznik.jmenoprijm}}</h1>
 <table>
-    <tr>
-        <td>Jméno a příjmení: </td>
-        <td>{{zakaznik.jmenoprijm}}</td>
-    </tr>
+
     <tr>
         <td>Číslo řidičského průkazu: </td>
         <td>{{zakaznik.ridicprukaz}}</td>
@@ -31,7 +28,7 @@
 
 </table>
 
-{% endfor %}
+{% endblock %}
 <br> <br>
 <a href="{% url 'auta' %}">Katalog našich aut</a>
 </body>
