@@ -51,18 +51,18 @@ class DetailAutaView(DetailView):
 
 class NoveAutoView(CreateView):
     model = models.Auto
-    template_name = "auto/nove_auto.html"
+    template_name = "katalog/auto/nove_auto.html"
     fields = ["registracnizn", "znackatyp", "najetekm", "datkontroly"]
     success_url = reverse_lazy("potvrd_auto")
 
 class PotvrdNoveAutoView(TemplateView):
-    template_name = "auto/potvrd_auto.html"
+    template_name = "katalog/auto/potvrd_auto.html"
 
 class NovyZakaznikView(CreateView):
     model = models.Zakaznik
-    template_name = "zakaznik/novy_zakaznik.html"
+    template_name = "katalog/zakaznik/novy_zakaznik.html"
     fields = ["jmenoprijm", "ridicprukaz", "datumnaroz"]
     success_url = reverse_lazy("potvrd_zakaznika")
 
 class PotvrdNovyZakaznikView(TemplateView):
-    template_name = "zakaznik/potvrd_zakaznika.html"
+    template_name = "katalog/zakaznik/potvrd_zakaznika.html"
