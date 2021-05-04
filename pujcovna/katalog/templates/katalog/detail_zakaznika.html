@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'katalog' %}">Zpět na hlavní stránku</a>
+
+{% for zakaznik in object_list %}
+
+<h1>Zákazník</h1>
+<table>
+    <tr>
+        <td>Jméno a příjmení: </td>
+        <td>{{zakaznik.jmenoprijm}}</td>
+    </tr>
+    <tr>
+        <td>Číslo řidičského průkazu: </td>
+        <td>{{zakaznik.ridicprukaz}}</td>
+    </tr>
+    <tr>
+        <td>Datum narození: </td>
+        <td>{{zakaznik.datumnaroz}}</td>
+    </tr>
+    <tr>
+        <td>Výpůjčka: </td>
+        <td>{{zakaznik.vypujcka}}</td>
+    </tr>
+    <tr>__________________________</tr>
+
+</table>
+
+{% endfor %}
+<br> <br>
+<a href="{% url 'auta' %}">Katalog našich aut</a>
+</body>
+</html>

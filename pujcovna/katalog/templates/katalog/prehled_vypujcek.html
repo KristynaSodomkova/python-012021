@@ -10,7 +10,10 @@
 {% for vypujcka in object_list %}
 
 <p>{{vypujcka.auto}}: od {{vypujcka.datumvypujcky}} , do {{vypujcka.datumkoncevypujcky}}</p>
+<a href="{% url 'vypujcka' vypujcka.pk %}">Detail výpůjčky</a>
+
 {% endfor %}
+<br>
 <a href="{% url 'auta' %}">Katalog našich aut</a>
 </body>
 </html>

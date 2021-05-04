@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for vypujcka in object_list %}
+<h1>Výpůjčka</h1>
+<table>
+    <tr>
+        <td>Vypůjčeno od: </td>
+        <td>{{vypujcka.datumvypujcky}}</td>
+    </tr>
+    <tr>
+        <td>Vypůjčeno do: </td>
+        <td>{{vypůjcka.datumkoncevypujcky}}</td>
+    </tr>
+    <tr>
+        <td>Cena: </td>
+        <td>{{vypujcka.cenavypujcky}}</td>
+    </tr>
+    <tr>
+        <td>Automobil: </td>
+        <td>{{vypujcka.auto}}</td>
+    </tr>
+    <tr>__________________________</tr>
+
+</table>
+{% endfor %}
+<a href="{% url 'auta' %}">Katalog našich aut</a>
+</body>
+</html>

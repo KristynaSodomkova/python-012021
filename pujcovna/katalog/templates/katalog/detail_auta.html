@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'katalog' %}">Zpět na hlavní stránku</a>
+
+{% for auto in object_list %}
+
+<h1>Automobil</h1>
+<table>
+    <tr>
+        <td>Registrační značka: </td>
+        <td>{{auto.registracnizn}}</td>
+    </tr>
+    <tr>
+        <td>Značka a typ vozu: </td>
+        <td>{{auto.znackatyp}}</td>
+    </tr>
+    <tr>
+        <td>Počet najetých kilometrů: </td>
+        <td>{{auto.najetekm}}</td>
+    </tr>
+    <tr>
+        <td>Poslední datum kontroly: </td>
+        <td>{{auto.datkontroly}}</td>
+    </tr>
+    <tr>__________________________</tr>
+
+</table>
+
+{% endfor %}
+<br> <br>
+<a href="{% url 'auta' %}">Katalog našich aut</a>
+</body>
+</html>

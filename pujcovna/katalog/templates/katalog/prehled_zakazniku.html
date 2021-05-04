@@ -12,8 +12,10 @@
 {% for zakaznik in object_list %}
 
 <p>{{zakaznik.jmenoprijm}}</p>
+<a href="{% url 'zakaznik' zakaznik.pk %}">Detail zákazníka</a>
 
 {% endfor %}
+<br> <br>
 <a href="{% url 'auta' %}">Katalog našich aut</a>
 </body>
 </html>
